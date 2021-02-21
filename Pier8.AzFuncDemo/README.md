@@ -20,3 +20,10 @@ Trigger the function
 
 `curl -X POST -d '' http://localhost:7071/api/TriggerContainer`
 
+## To Do
+
+- Re-run &amp; trigger the function
+- Once container is running... 
+- Connect to the container `bin/sh`
+- Check files are in the correct place
+- Then execute `openscad -o /src/outputfile.stl /SCAD/minkowski_Board.scad`

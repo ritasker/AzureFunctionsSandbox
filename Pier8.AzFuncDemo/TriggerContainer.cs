@@ -51,8 +51,8 @@ namespace Pier8.AzFuncDemo
             var rgName = SdkContext.RandomResourceName("rgACI", 15);
             var aciName = SdkContext.RandomResourceName("acisample", 20);
             var shareName = SdkContext.RandomResourceName("fileshare", 20);
-            string containerImageName = "seanmckenna/aci-hellofiles";
-            string volumeMountName = "aci-helloshare";
+            var containerImageName = "foz1284/minowski";
+            var volumeMountName = "finger-board";
 
             try
             {
@@ -63,16 +63,17 @@ namespace Pier8.AzFuncDemo
                     .WithPublicImageRegistryOnly()
                     .WithNewAzureFileShareVolume(volumeMountName, shareName)
                     .DefineContainerInstance(aciName)
-                        .WithImage(containerImageName)
-                        .WithExternalTcpPort(80)
-                        .WithVolumeMountSetting(volumeMountName, "/aci/logs/")
-                        .Attach()
+                    .WithImage(containerImageName)
+                    .WithExternalTcpPort(80)
+                    .WithStartingCommandLine("tail -f /dev/null")
+                    .WithVolumeMountSetting(volumeMountName, "/src")
+                    .Attach()
                     .WithDnsPrefix(aciName)
                     .Create();
 
                 Print(containerGroup, log);
 
-                SdkContext.DelayProvider.Delay(20000);
+                SdkContext.DelayProvider.Delay(300000);
                 log.LogInformation("Container instance IP address: " + containerGroup.IPAddress);
 
                 containerGroup = azure.ContainerGroups.GetByResourceGroup(rgName, aciName);
@@ -95,8 +96,8 @@ namespace Pier8.AzFuncDemo
                 }
             }
         }
-        
-        public static void Print(IContainerGroup containerGroup, ILogger log)
+
+        private static void Print(IContainerGroup containerGroup, ILogger log)
         {
             var info = new StringBuilder().Append("Container Group: ").Append(containerGroup.Id)
                 .Append("Name: ").Append(containerGroup.Name)
