@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Pier8.AzFuncDemo": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "AZURE_AUTH_LOCATION": "my.azureauth"
+      }
+    }
+  }
+}
