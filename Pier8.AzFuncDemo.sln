@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pier8.AzFuncDemo", "Pier8.AzFuncDemo\Pier8.AzFuncDemo.csproj", "{EC72A53A-8D60-4209-8914-A941F4CDC6A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pier8.StorageQueues", "Pier8.StorageQueues\Pier8.StorageQueues.csproj", "{895E4E36-8CD3-431E-8439-D60EECAB6E20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pier8.EventGrid", "Pier8.EventGrid\Pier8.EventGrid.csproj", "{70722142-15C5-4AC8-9703-36B2EC20A9B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{EC72A53A-8D60-4209-8914-A941F4CDC6A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC72A53A-8D60-4209-8914-A941F4CDC6A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC72A53A-8D60-4209-8914-A941F4CDC6A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{895E4E36-8CD3-431E-8439-D60EECAB6E20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{895E4E36-8CD3-431E-8439-D60EECAB6E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{895E4E36-8CD3-431E-8439-D60EECAB6E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{895E4E36-8CD3-431E-8439-D60EECAB6E20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70722142-15C5-4AC8-9703-36B2EC20A9B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70722142-15C5-4AC8-9703-36B2EC20A9B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70722142-15C5-4AC8-9703-36B2EC20A9B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70722142-15C5-4AC8-9703-36B2EC20A9B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
